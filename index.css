@@ -1,0 +1,28 @@
+body {
+  overflow-x: hidden;
+}
+
+.carousel {
+  width: 800px;
+}
+
+.collapse ul li a {
+  color: white;
+}
+
+/* .tombol {
+  margin-left: 570px;
+} */
+.aplication .card .row .col p {
+  font-size: x-large;
+}
+
+/* .footer .row .col ul li a:hover {
+  text-decoration: dashed;
+} */
+
+@media all and (max-width: 576px) {
+  .carousel {
+    width: 450px;
+  }
+}
