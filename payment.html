@@ -21,12 +21,20 @@
       //   alert('terima kasih telah memesan');
       // }
     </script>
+
+    <style>
+      @media all and(max-width: 576px) {
+        .card {
+          width: 10rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <!--Navbar-->
     <section>
-      <nav class="navbar navbar-expand-lg" style="border-bottom: 2px solid #f48901; font-family: 'Hepta Slab', serif">
+      <nav class="navbar navbar-expand-lg-sm" style="border-bottom: 2px solid #f48901; font-family: 'Hepta Slab', serif">
         <div class="container-fluid">
           <a class="navbar-brand ms-5 fs-3" href="index.html"> <span style="color: #f48901" class="fs-2"> FS</span> Resto</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +88,7 @@
 
         <form action="post" class="mt-5">
           <h5>Jumlah makanan</h5>
-          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" /> <br />
+          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" onkeyup="mult(this.value)" /> <br />
           <h5 class="mt-5">Level kepedasan</h5>
 
           <input type="radio" name="pesanan" value="pedesMampus" required="" />
@@ -89,11 +97,20 @@
           <label for="pedesgila">pedes gila</label>
 
           <h5 class="mt-5">Total</h5>
-          <h2 id="total">Rp.0</h2>
+          <h2 id="hasilTotal"></h2>
           <button type="button" class="btn btn-warning mt-4" onclick="tombol()">Pesan</button>
         </form>
       </div>
     </div>
+
+    <!-- perhitungan otomatis -->
+    <script>
+      function mult(value) {
+        let harga = value * 25000;
+        document.getElementById('hasilTotal').innerHTML = 'Rp. ' + harga;
+      }
+    </script>
+    <!-- akhir hitung otomatis -->
 
     <!-- <div class="card text-center">
       <div class="card-header" style="font-size:xx-large ; font-family: 'Franklin Gothic Medium';">

@@ -80,7 +80,7 @@
 
         <form action="post" class="mt-5">
           <h5>Jumlah ice cream</h5>
-          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" /> <br />
+          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" onkeyup="mult(this.value)" /> <br />
           <h5 class="mt-5">ukuran cone</h5>
 
           <input type="radio" name="minuman" value="Medium" required="" />
@@ -89,12 +89,18 @@
           <label for="large">Large</label>
 
           <h5 class="mt-5">Total</h5>
-          <h2 id="total">Rp.0</h2>
+          <h2 id="total"></h2>
           <button type="button" class="btn btn-warning mt-4" onclick="tombol()">Pesan</button>
         </form>
       </div>
     </div>
 
+    <script>
+      function mult(value) {
+        let harga = value * 10000;
+        document.getElementById('total').innerHTML = 'Rp. ' + harga;
+      }
+    </script>
     <!-- <div class="card text-center">
       <div class="card-header" style="font-size:xx-large ; font-family: 'Franklin Gothic Medium';">
         DO YOU WANT TO ORDER?
