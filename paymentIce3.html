@@ -119,18 +119,22 @@
     <!--Content End-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  
+
     <script type="text/javascript">
       function tombol() {
         swal({
-              title: "Your Transaction Is Success",
-              text: "Please Wait For Your Order :)) ",
-              icon: "success",
-              button: true
-          });
+          title: 'Your Transaction Is Success',
+          text: 'Please Wait For Your Order :)) ',
+          icon: 'success',
+          button: true,
+        }).then(function () {
+          window.location = 'index.html';
+        });
       }
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>import swal from 'sweetalert';</script>
+    <script>
+      import swal from 'sweetalert';
+    </script>
   </body>
 </html>
