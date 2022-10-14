@@ -88,7 +88,7 @@
 
         <form action="post" class="mt-5">
           <h5>Jumlah makanan</h5>
-          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" onkeyup="mult(this.value)" /> <br />
+          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none"  onkeyup="mult(this.value)" required/> <br />
           <h5 class="mt-5">Level kepedasan</h5>
 
           <input type="radio" name="pesanan" value="pedesMampus" required="" class="mt-5" />
@@ -115,7 +115,7 @@
 
           <h5 class="mt-5">Total</h5>
           <h2 id="hasilTotal"></h2>
-          <button type="button" class="btn btn-warning mt-4" onclick="tombol()">Pesan</button>
+          <button type="submit" class="btn btn-warning mt-4" onclick="tombol()">Pesan</button>
           <button type="button" class="btn btn-warning mt-4 ms-5"><a href="food.html" style="color: black; text-decoration: none">Batal</a></button>
         </form>
       </div>
