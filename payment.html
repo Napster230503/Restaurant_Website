@@ -32,9 +32,10 @@
     </script> -->
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
+    <script type="module">
       import swal from 'sweetalert';
     </script>
+
     <script>
       function tombol() {
         swal({
@@ -160,9 +161,10 @@
     <script>
       function mult(value) {
         let harga = value * 25000;
-        document.getElementById('hasilTotal').innerHTML = 'Rp. ' + harga;
+        document.getElementById('hasilTotal').innerText = 'Rp. ' + harga;
       }
     </script>
+    
     <!-- akhir hitung otomatis -->
 
     <!-- <div class="card text-center">
