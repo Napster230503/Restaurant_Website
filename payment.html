@@ -108,7 +108,7 @@
         <form class="mt-5" name="myForm">
           <h5>Jumlah makanan</h5>
           <!-- <input type="number" name="Jumlah" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" onkeyup="mult(this.value)" /> <br /> -->
-          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" onkeyup="mult(this.value)" required /> <br />
+          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" onclick="mult()" onkeyup="mult()" required id="harga" /> <br />
           <h5 class="mt-5">Level kepedasan</h5>
 
           <input type="radio" name="pesanan" value="pedesMampus" required="" class="mt-5" />
@@ -159,8 +159,9 @@
 
     <!-- perhitungan otomatis -->
     <script>
-      function mult(value) {
-        let harga = value * 25000;
+      function mult() {
+        let makanan = document.getElementById('harga');
+        let harga = Number(makanan.value) * 25000;
         document.getElementById('hasilTotal').innerText = 'Rp. ' + harga;
       }
     </script>

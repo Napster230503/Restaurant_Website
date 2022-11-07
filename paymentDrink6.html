@@ -80,7 +80,7 @@
 
         <form action="post" class="mt-5">
           <h5>Jumlah minuman</h5>
-          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" onkeyup="mult(this.value)" /> <br />
+          <input type="number" style="width: 5rem; border: none; border-bottom: 2px solid #f48901; outline: none" required="" onkeyup="mult()" onclick="mult()" id="harga" /> <br />
           <h5 class="mt-5">ukuran gelas</h5>
 
           <input type="radio" name="minuman" value="Medium" required="" />
@@ -131,8 +131,9 @@
     </script>
 
     <script>
-      function mult(value) {
-        let harga = value * 22000;
+      function mult() {
+        let minuman = document.getElementById('harga');
+        let harga = Number(minuman.value) * 22000;
         document.getElementById('total').innerHTML = 'Rp. ' + harga;
       }
     </script>
