@@ -7,6 +7,6 @@ function db_connect () {
     return $con;
 }
 function db_disconnect($con) {
-    mysql_close($con)
+    mysql_close($con);
 }
 ?>
